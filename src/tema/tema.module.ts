@@ -1,4 +1,4 @@
-import { Module } from "@nestjs/common/decorators/modules/module.decorator";
+import { Module } from "@nestjs/common/";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { TemaController } from "./controllers/tema.controller";
 import { Tema } from "./entities/tema.entities";

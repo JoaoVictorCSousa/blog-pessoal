@@ -1,11 +1,12 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put } from "@nestjs/common";
-
-import { Postagem } from "src/postagem/entities/postagem.entitiy";
-import { brotliDecompressSync } from "zlib";
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Put, UseGuards } from "@nestjs/common";
+import { JwtAuthGuard } from "../../auth/guard/jwt.auth.guard";
 import { Tema } from "../entities/tema.entities";
 import { TemaService } from "../services/tema.service";
 
 
+
+
+@UseGuards(JwtAuthGuard)
 @Controller('/tema')
 export class TemaController{
     constructor (private readonly temaService: TemaService){}

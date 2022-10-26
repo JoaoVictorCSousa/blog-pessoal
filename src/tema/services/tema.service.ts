@@ -1,6 +1,5 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { timeStamp } from "console";
 import { DeleteResult, ILike, Repository } from "typeorm";
 import { Tema } from "../entities/tema.entities";
 
